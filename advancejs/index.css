@@ -1,0 +1,14 @@
+.name{
+    border: 2px solid black;
+    width: 70%;
+    margin: 10px auto;
+    text-transform: capitalize;
+    background-color: black;
+    color: white;
+}
+
+h2{
+    width: 50%;
+    text-align: center;
+    margin: 4px auto;
+}
