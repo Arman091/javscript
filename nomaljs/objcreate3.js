@@ -19,7 +19,7 @@ obj3.key3 = 'value3';
 console.log(obj3.key1,obj3.key4)
 console.log(obj3)
 
-/* if we look at proto then proto of object three is obj1, so proto ot prototype of an object in javascript is
+/* if we look at proto then proto of object three is obj1, so proto or prototype of an object in javascript is
  another object from where an object can inherit property   */
 
  /* when we search for a property in an object then it is sreached not only in object itslef but also in

@@ -8,12 +8,13 @@ const person={
     hobbies: ["reading", "travelling", "planting"]
 };
 
-//accesing an object
+/*accesing an object
 console.log(person);
 console.log(person.hobbies);
 console.log(person.age);
 console.log(person["name"]);  //second method of accesing a key in object
 person.hobbies.push("singing");
+*/
 
 
 //adding key value pairs to an object
