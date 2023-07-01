@@ -1,34 +1,13 @@
-
 .container{
-
-    background-color: aquamarine;
     display: grid;
-
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(4,1fr);
-
-   column-gap: 5px;
-   row-gap: 5px;
+    border: 2px solid black;
+    column-gap: 9px;
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
 
-#btn{
-   grid-column-start: 2;
-   grid-column-end: 4;
-
-    grid-row-start: 3;
-    grid-row-end: 4;
-
-    
-
-}
-button{
-    margin: 0em auto;
-    display: block;
-}
-.entry{
-    grid-column-start: 2;
-        grid-column-end: 4;
-        grid-row-start: 1;
-        grid-row-end: 2;
-      
+.grid-item{
+    border: 1px solid rebeccapurple;
+    justify-content: space-between;
+    background-color: brown;
 }

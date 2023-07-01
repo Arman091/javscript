@@ -1,7 +1,7 @@
 /* in this file we  will try to solve our problem with factory funcctions 
 taking extra memorey for each function */
 const userMethods = {
-    about: function about() { console.log(`my name is ${this.name} and age is ${this.age}`) },
+    about: function about() { return `my name is ${this.name} and age is ${this.age}`},
     checkAge: function checkAge(){
         if (this.age >= 18) {
         console.log('hii adult man')
@@ -12,6 +12,7 @@ const userMethods = {
     }
 }
 
+// factory function but functions stored somewhere else and we are passing just refrence of them
 function createObject(name,age,id) {
     const user = {};
     user.name = name;
@@ -27,4 +28,4 @@ const obj2 = createObject('zimran', 19, 3000)
 const obj3 = createObject('armigan', 11, 4000)
 
 
-console.log(obj1.checkAge.prototype)
+console.log(obj1.intro.call(obj2))

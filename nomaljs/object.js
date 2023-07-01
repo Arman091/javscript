@@ -5,7 +5,8 @@ const key = "email";
 const person={
     name:"arman",
     age:22,
-    hobbies: ["reading", "travelling", "planting"]
+    hobbies: ["reading", "travelling", "planting"],
+    address:{city:"delhi",country:"india",street:224}
 };
 
 /*accesing an object
@@ -17,15 +18,34 @@ person.hobbies.push("singing");
 */
 
 
-//adding key value pairs to an object
+/*adding key value pairs to an object
 person.gender = "male";
-
 console.log(person);
+*/
 
 /*dot vs bracket ka diffrence [] notation gives an advantage when we take values from outside
-through a variablr
-*/
-person[key] = "rasoolarman7@gmail.com"; //using dot operator key value will be stored by variable name
+through a variable
+using dot operator key value will be stored by variable name
+person[key] = "rasoolarman7@gmail.com";
 console.log(person);
-//person["key"] = "rasoolarman7@gmail.com"; this will store the key value by key name
-console.log(person)
+person["key"] = "rasoolarman7@gmail.com"; this will store the key value by key name
+*/
+
+/*
+  OBJECT DESTRUCTURING
+
+  type==1
+  
+let { city, country, street } = person.address;
+console.log(`my cit is ${city} i am from ${country}`);
+
+     TYPE==2
+
+let { address: { city: c } } = person;
+console.log(c)
+*/
+
+for (let prop in person) {
+    console.log(person[prop])
+}
+

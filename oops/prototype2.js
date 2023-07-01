@@ -6,7 +6,7 @@
 //in factory method we were setting up our proto to our own protoype by using object.create
 
 const userMethods = {
-    about: function about() { console.log(`my name is ${this.name} and age is ${this.age}`) },
+  /*  about: function about() { console.log(`my name is ${this.name} and age is ${this.age}`) },
     checkAge: function checkAge() {
         if (this.age >= 18) {
             console.log('hii adult man')
@@ -15,7 +15,7 @@ const userMethods = {
             console.log('you are baby...')
         }
     },
-
+*/
     // change 2.0 we want to add another method
 
     sing: function () {
@@ -24,7 +24,7 @@ const userMethods = {
 }
 
 function createObject(name, age, id) {
-    const user = Object.create(userMethods) //2.0 here we are changing proto_- value before change it was 
+    const user = Object.create(createObject.prototype) //2.0 here we are changing proto_- value before change it was 
     user.name = name;                       //referring to native code
     user.age = age;
     user.id = id;
@@ -34,6 +34,13 @@ function createObject(name, age, id) {
    */ return user;                       //use object.create() which will create objects with common parts
 }
 
+createObject.prototype.checkAge = function () {
+     if (this.age >= 18) {
+       console.log("hii adult man");
+     } else {
+       console.log("you are baby...");
+     }
+}
 const obj1 = createObject('arman', 19, 1200)
 const obj2 = createObject('zimran', 19, 3000)
 const obj3 = createObject('armigan', 11, 4000)

@@ -1,69 +1,53 @@
-/* array creation using javascript
+let my_array = new Array(2, 23, 43, 45, 56, 67, 55);
 
- 1.Using Array literal
+/*for each method
 
- 2. array constructors
- let veg = new Array("potato", "tomato", "chili");
-
-
- 3.creating empty array then feeding it
- let veg = [];
- veg.push(1);
- veg.push(2);
- veg.push(3);
-
-    OR
-let veg = new Array();
-veg[0] = "arman";
-veg[1] = "zimran";
-console.log(veg)
-
+my_array.forEach(function (elment,index) {
+  console.log(`elment ${elment} is on index ${index} \n`);
+  console.log(`sum of ${elment} and index ${index} is ${elment+index}`)
+})
 */
 
-/* ======================================================================
-  push pop shift unshift inbuilt functions
 
+/*map method
+let rtrnaray=my_array.map(function (element, index) {
+  if (element % 2 === 0) {
+    return true
+  }
 
-
-const fruits = ["apple", "mango", "banana"];
-for (fruit of fruits) {
-    console.log(fruit);
-    
-}
-
-fruits.push("pineappale");
-for (const fruit of fruits) {
-    console.log(fruit);
-    
-}
- 
-
-
-    console.log(fruits.pop());
-    
+  else {
+    return false
+  }
+})
+console.log(rtrnaray)
 */
 
-/* =============================================================================
-cloning an array
-let arr1 = ["apple", "mango", "banana"];
-arr2 = [...arr1];
-arr1.push("new fruit");
-console.log(arr1);
-console.log(arr2);
+/* filter function 
+  FILTER WILL RETURN AN ARRAY WITH VALUES  GREATER THAN 45
+  biG(O)=O(N)
+  const result =my_array.filter(function (element) {
+    return element > 45;
+  })
+  console.log("FILTERED array RESULT " + result)
+  */
 
 
-            OR
- let arr1 = ["apple", "mango", "banana", 1, 2, 3, 4, 5];
- console.log(arr1.slice(0, 4));
- console.log(`this is original array ${arr1}`)
+/* FIND METHOD
+biG(O)=O(N)
+FIND WILL RETURN FIRST MATH WITH THE GIVEN CONDITION
 */
 
-/*array destructuring
-const myArray = ["potato", "tomato", "chilli"];
-let [...mynewArray] = myArray;
+/* splice method
+ Array(2, 23, 43, 45, 56, 67, 55)
 
-for (veg of mynewArray) {
-  console.log(veg);
-}
 
+let modified = my_array.splice(2, 3, "arman", "peter", "luke");
+console.log(modified); //returned trimmed values 43,45,56
+console.log(my_array); // returned values inserted in it;
+
+console.log(my_array.splice(2, 4)); // only delete elements from starting index;
 */
+console.log(my_array);
+ my_array.splice(2, 0,"ki","ji"); // at position two add two elements
+console.log("my array after operation "+ my_array)
+
