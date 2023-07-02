@@ -19,16 +19,15 @@ class Animal{
 
 class Dog extends Animal{
     constructor(name, age, speed) {
-        super(name, age);
+        super(name, age);  // super keyword is used to add existing properties of parent class to child class 
         this.speed = speed;
     }
-/* if parent and child class both have same function then java script will call base 
-class function by default */
+/* all properties and methods of parent class are available to child class using Extends */
     mySpeed() { 
-       console.log(`our ${this.name} is running at ${this.speed}`)       
+       console.log(`our ${this.name} is running at ${this.speed}Kmph`)       
    }                                                                         
 }
 
 const dog1 = new Dog('tommy', 12, 45);
-dog1.mySpeed();
 dog1.about();
+dog1.mySpeed();

@@ -1,13 +1,35 @@
-.container{
-    display: grid;
-    border: 2px solid black;
-    column-gap: 9px;
-    grid-column-start: 1;
-    grid-column-end: 3;
+ .grid-container {
+      background-color: lightgray; /* Adding background color to the grid container */
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* Two columns */
+      grid-gap: 10px; /* Gap between grid items */
+      padding: 10px; /* Padding for the container */
+       grid-auto-flow: dense;
+    }
+
+    .grid-item {
+      background-color: white; /* Adding background color to the grid items */
+      padding: 20px;
+      border: 1px solid gray;
+    }
+
+    /* For smaller phones */
+@media (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
 }
 
-.grid-item{
-    border: 1px solid rebeccapurple;
-    justify-content: space-between;
-    background-color: brown;
+/* For larger phones and small tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+/* For larger tablets and desktops */
+@media (min-width: 769px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
