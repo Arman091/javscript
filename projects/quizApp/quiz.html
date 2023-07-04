@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./quiz.css">
+    <title>Document</title>
+</head>
+<body>
+  <div class="quiz-container">
+    <h2>Sports Quiz App</h2>
+    <div class="question-container">
+      <h3 id="question-text"></h3>
+      <ul id="answer-options"></ul>
+    </div>
+    <div class="controls">
+      <button id="submit-btn">Submit</button>
+      <button id="next-btn" onclick="nextQuestion()">Next</button>
+    </div>
+    <div id="result"></div>
+  </div>
+
+  <script src="./quiz.js"></script>
+</body>
+</html>
