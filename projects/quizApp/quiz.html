@@ -1,25 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./quiz.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./quiz.css" />
     <title>Document</title>
-</head>
-<body>
-  <div class="quiz-container">
-    <h2>Sports Quiz App</h2>
-    <div class="question-container">
-      <h3 id="question-text"></h3>
-      <ul id="answer-options"></ul>
+  </head>
+  <body>
+    <div class="quiz-container">
+      <h2>Sports Quiz App</h2>
+      <div class="question-container">
+        <h3 id="question-text"></h3>
+        <ul id="answer-options"></ul>
+      </div>
+      <div class="controls">
+        <button id="submit-btn" onclick="submitHandler()">Submit</button>
+        <button id="next-btn" onclick="nextQuestion()">Next</button>
+      </div>
+      <div id="result"></div>
     </div>
-    <div class="controls">
-      <button id="submit-btn">Submit</button>
-      <button id="next-btn" onclick="nextQuestion()">Next</button>
-    </div>
-    <div id="result"></div>
-  </div>
 
-  <script src="./quiz.js"></script>
-</body>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Thanks Quiz is Over !!!!!</h2>
+        <div class="result">
+          <p>final Score</p>
+          <p>Correct Answers</p>
+        </div>
+        <div class="stats">
+          <p id="my_score"></p>
+           <p id="my_correct"></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="./quiz.js"></script>
+  </body>
 </html>

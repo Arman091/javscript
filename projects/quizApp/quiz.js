@@ -49,26 +49,61 @@ let questions = [
 ];
 
 let index = 0; // to keep track of Question
-
-// function to display Question and Set Answer
+let score = 0;
+let question = document.getElementById("question-text");
+let optionsContainer = document.getElementById("answer-options");
 
 function setQuestion() {
-  let question = document.getElementById("question-text");
-  let options = document.getElementById("answer-options");
-  question.innerText = questions[index].question;
-  options.innerHTML = `
-    <li class="option">${questions[index].options[0]}</li>
-    <li class="option" >${questions[index].options[1]}</li>
-    <li class="option">${questions[index].options[2]}</li>
-    <li class="option">${questions[index].options[3]}</li>
-    `;
+  if (index < questions.length) {
+    question.innerText = questions[index].question;
+    optionsContainer.innerHTML = `
+      <li class="option" onclick="checkAnswer(0)">${questions[index].options[0]}</li>
+      <li class="option" onclick="checkAnswer(1)">${questions[index].options[1]}</li>
+      <li class="option" onclick="checkAnswer(2)">${questions[index].options[2]}</li>
+      <li class="option" onclick="checkAnswer(3)">${questions[index].options[3]}</li>
+      `;
+  } else {
+    // Handle end of quiz (e.g., display results)
+    console.log("End of quiz");
+    submitHandler();
+    // modal to display
+  }
 }
 
-setQuestion(index); // initial question SetUp;
-
+setQuestion(index); //initial question SetUp;
 // function to get Next Question
-
 function nextQuestion() {
-  index = index + 1;
-  setQuestion(index);
+  if (index < questions.length) {
+    index = index + 1;
+
+    setQuestion(index);
+  }
 }
+
+function checkAnswer(selectedOption) {
+  const selectedOptionElement = optionsContainer.children[selectedOption];
+  const correctAnswer = questions[index].answer;
+  if (selectedOption === questions[index].answer) {
+    selectedOptionElement.style.backgroundColor = "green";
+    score++;
+    // Perform actions for a correct answer
+  } else {
+    // Perform actions for a wrong answer
+    selectedOptionElement.style.backgroundColor = "red";
+  }
+}
+
+function closeModal() {
+   document.getElementById("myModal").style.display = "none";
+}
+
+//submiHandler
+
+function submitHandler() {
+  console.log("hello")
+    let scorevar = document.getElementById("my_score");
+    let correct = document.getElementById("my_correct");
+    scorevar.innerText = `${score}`;
+    correct.innerText = `${score}`;
+   document.getElementById("myModal").style.display = "block";
+ }
