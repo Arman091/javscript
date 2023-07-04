@@ -1,20 +1,3 @@
-/*
-// Select the first element with class "my-class"
-const element = document.querySelector('.my-class');
-
-// Select all elements with class "my-class"
-const elements = document.querySelectorAll('.my-class');
-
-// Select the element with ID "my-id"
-const elementById = document.getElementById('my-id');
-
-// Select all elements with class "my-class" within the element with ID "my-container"
-const elementsInContainer = document.querySelectorAll('#my-container .my-class');
-
-// Select all elements with the tag name "div"
-const divElements = document.getElementsByTagName('div');
-*/
-
 let todos = [];
 function handleInput(event) {
   event.preventDefault();
@@ -36,11 +19,26 @@ function toRender() {
   for (var i = 0; i < todos.length; i++) {
     var todoItem = document.createElement("li");
     todoItem.textContent = todos[i];
-    todoList.appendChild(todoItem);  //adding li element
+    todoList.appendChild(todoItem); //adding li element
 
     var deleteButton = document.createElement("button");
-    deleteButton.textContent = "Delete"; //addding delete button to li element
-
+    deleteButton.textContent = "Delete"; //addding delete button to li element;
     todoItem.appendChild(deleteButton);
   }
+}
+
+var todoList = document.getElementById("todo-list");
+todoList.addEventListener("click", handleDelete);
+
+function handleDelete(event) {
+  if (event.target.nodeName === "BUTTON") {
+    var todoItem = event.target.parentNode; // Get the parent li element
+    var index = Array.from(todoItem.parentNode.children).indexOf(todoItem); // Get the index of the li element
+    deleteTodo(index);
+  }
+}
+
+function deleteTodo(index) {
+  todos.splice(index, 1);
+  toRender();
 }
