@@ -97,8 +97,6 @@ function closeModal() {
    document.getElementById("myModal").style.display = "none";
 }
 
-//submiHandler
-
 function submitHandler() {
   console.log("hello")
     let scorevar = document.getElementById("my_score");
