@@ -8,8 +8,13 @@ class MyClass {
 
   regularMethod() {
     console.log("This is a regular method");
-  }
+    }
+    
+    // adding static propertries 
+    static PI=3.1428
 }
+// accessing static property using className;
+console.log(`static property accessed ${MyClass.PI}`);
 
 // Calling the static method without creating an instance
 MyClass.staticMethod(); // Output: This is a static method
