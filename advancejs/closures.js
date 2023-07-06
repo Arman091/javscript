@@ -12,12 +12,12 @@ x();
 
 // a more complicated look at closure
 
-function parent() {
+  function parent() {
     let b = 10;
-    function child() {
+   return function child() {
         console.log(b + "printed from inside the child");
     }
-    return child;
+    // return child;
 }
 let y = parent();  // after returning control in this line PARENT IS gone from callstack
 console.log(y);   //here y function has refrence of child due to closure;
