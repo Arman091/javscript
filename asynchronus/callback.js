@@ -11,10 +11,19 @@
 */
 
 
-//SETTIMEOUT AS CALLBACK FUNCTION
+// CALLBACK FUNCTION GENERAL EXAMPLE
 
-console.log("arman");
-setTimeout(() => {
-    console.log('rasool')
-}, 1000);
+function addTwoNumbers(num1, num2, callback) {
+  if (typeof num1 === "number" && typeof num2 === "number") {
+    callback(num1, num2);
+  } else {
+    console.log("input must be a number");
+  }
+}
+
+function sum(num1, num2) {
+  console.log(num1 + num2) 
+}
+
+addTwoNumbers(3, 4, sum);
 
