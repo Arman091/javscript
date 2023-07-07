@@ -12,6 +12,8 @@
       padding: 20px;
       border: 1px solid gray;
       text-align: center;
+      font-weight: bold;
+      font-size: medium;
     }
 
     /* For smaller phones */
