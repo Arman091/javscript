@@ -23,7 +23,7 @@ changeColor(heading1, "step 1", "red", () => {
         changeColor(heading3, "step 3", "violet", () => {
           changeColor(heading4, "step 4", "blue", () => {
             changeColor(heading5, "step 5", "grey", () => {
-                 console.log("end of program")
+                        console.log("End of program ")
             }, () => {console.log("error performing action") })
            },()=>{console.log("error performing operation");}) 
         },()=>{console.log("error performing operation");})
