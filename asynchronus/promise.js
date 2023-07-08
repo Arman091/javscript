@@ -23,6 +23,7 @@ prom.catch(() => {
 // practice with another promise
 let promis = new Promise((resolve, reject) => {
   if (ingrd) {
+    // resolve an inbuilt function  was passed by javascript as a promise implementation to the executer function.
     resolve("we are passing argument from resolve"); //this argument will be passed to callback of then.
   } else {
     reject("we are passing argument from reject");
