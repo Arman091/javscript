@@ -7,7 +7,7 @@ let stock = {
 
 let is_open = true;
 let userinputs = {
-  fruit: "guava",
+  fruit: "apple",
   liquids: "water",
   holder: "sticks",
   topping: "peanuts",
