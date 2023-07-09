@@ -24,7 +24,8 @@ function delay(ms) {
   if (typeof ms === "number") {
     return new Promise((resolve) => setTimeout(resolve, ms));
   } else {
-    return new Promise((resolve, reject) => {  // adding reject part of promise in case if something went wrong;
+    return new Promise((resolve, reject) => {
+      // adding reject part of promise in case if something went wrong;
       reject("sorry we can't serve");
     });
   }
@@ -54,7 +55,6 @@ function updateHeading4() {
 function updateHeading5() {
   heading5.textContent = "Please checkout here is your Bill";
   heading5.style.backgroundColor = "violet";
-  heading5.style.color = "white";
 }
 if (is_open) {
   delay(100)
@@ -86,6 +86,10 @@ if (is_open) {
     })
     .then(() => {
       updateHeading4();
+      return delay(2000);
+    })
+    .then(() => {
+      updateHeading5();
     })
     .catch((error) => {
       console.log(error);
