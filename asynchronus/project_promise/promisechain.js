@@ -15,7 +15,7 @@ let userinputs = {
 const heading1 = document.getElementsByClassName("grid-item")[1];
 const heading2 = document.getElementsByClassName("grid-item")[2];
 const heading3 = document.getElementsByClassName("grid-item")[3];
-
+const heading4 = document.getElementsByClassName("grid-item")[4];
 function delay(ms) {
   /*
    The resolve function is provided by the JavaScript runtime as part of the Promise implementation. It is a built-in function that is automatically created and passed to the executor function when you create a new promise using the Promise constructor.
@@ -40,6 +40,11 @@ function updateHeading3() {
   heading3.style.backgroundColor = "skyblue";
 }
 
+function updateHeading4() {
+  heading4.textContent = "Here is your order served !!! Enjoy your meal"
+  heading4.style.backgroundColor = "yellow"
+  
+}
 if (is_open) {
   delay(500)
     .then(() => {
@@ -62,6 +67,9 @@ if (is_open) {
     })
     .then(() => {
       updateHeading3();
+      return delay(1000)
+    }).then(() => {
+      updateHeading4();
     })
     .catch((error) => {
       console.log(error);
