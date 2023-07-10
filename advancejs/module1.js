@@ -5,3 +5,7 @@ import eat from "./module2.js" // default import are imported without destructur
 console.log(food, drink);
 eat();
 
+import * as myObject from "./module2.js";
+
+console.log(myObject.food);   // this is our food variable export with name
+console.log(myObject.default) // we have refrence to our object
