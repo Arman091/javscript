@@ -95,4 +95,4 @@ async function processOrder() {
   }
 }
 
-processOrder();
+processOrder(); // execution starts
