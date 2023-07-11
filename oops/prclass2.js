@@ -19,8 +19,10 @@ class Animal{
 
 class Dog extends Animal{
     constructor(name, age, speed) {
-        super(name, age);  // super keyword is used to add existing properties of parent class to child class 
-        this.speed = speed;
+      // The super() method allows you to call the constructor of the parent class and initialize the inherited // 
+     //properties and set up the object's state.
+      super(name, age); // super keyword is used to add existing properties of parent class to child class
+      this.speed = speed;
     }
 /* all properties and methods of parent class are available to child class using Extends */
     mySpeed() { 
