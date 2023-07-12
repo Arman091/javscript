@@ -19,10 +19,21 @@ const xhr = new XMLHttpRequest();
 xhr.onreadystatechange = function () {
   if (xhr.readyState === 4 && xhr.status === 200) {
     // Code to handle the successful response
-
-    dataHandler(xhr.responseText);
+    dataHandler(xhr.responseText); // send to a function
   }
 };
+
+
+
+// open methods to open request
+/**
+The third parameter in the xhr.open() method represents whether the request should be asynchronous or not. In your example, the value true is passed as the third parameter, indicating that the request should be asynchronous.
+ */
+xhr.open("GET", url, true);
+xhr.send(); // sending the http request;
+
+
+// function to handle the data what to do with it;
 async function dataHandler(usersobject) {
   let data = await JSON.parse(usersobject);
   let users = data.slice(0, 12); // Create a new array with the first 10 items
@@ -34,10 +45,3 @@ async function dataHandler(usersobject) {
     element.appendChild(child);
   });
 }
-
-// open methods to open request
-/**
-The third parameter in the xhr.open() method represents whether the request should be asynchronous or not. In your example, the value true is passed as the third parameter, indicating that the request should be asynchronous.
- */
-xhr.open("GET", url, true);
-xhr.send();
