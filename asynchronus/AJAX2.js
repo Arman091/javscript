@@ -1,6 +1,5 @@
 // xhr PRACTICE USING XHR HTTP REQUEST
-const url = "https://jsonplaceholder.typicode.com/posts";
-const xhr = new XMLHttpRequest();
+
 
 // READY STATES
 /**
@@ -16,6 +15,8 @@ const xhr = new XMLHttpRequest();
  * 4. Done-> you can acces complete data.
  *
  */
+const url = "https://jsonplaceholder.typicode.com/posts";
+const xhr = new XMLHttpRequest();
 xhr.onreadystatechange = function () {
   if (xhr.readyState === 4 && xhr.status === 200) {
     // Code to handle the successful response
