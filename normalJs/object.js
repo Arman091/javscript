@@ -40,12 +40,11 @@ let { city, country, street } = person.address;
 console.log(`my cit is ${city} i am from ${country}`);
 
      TYPE==2
+     let { address: {country,city,street} } = person;
+     console.log(country,city,street)
+     */
 
-let { address: { city: c } } = person;
-console.log(c)
-*/
-
-for (let prop in person) {
-    console.log(person[prop])
-}
+// for (let prop in person) {
+//     console.log(person[prop])
+// }
 

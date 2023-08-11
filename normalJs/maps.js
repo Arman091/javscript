@@ -11,6 +11,7 @@ newPerson.set("key1", 5);
 newPerson.set("key2", 10);
 newPerson.set("key1", 20);
 
+// here we can have only one "key1" that will be updated 
 console.log(newPerson.get("key1"))
 console.log(newPerson.get("key1"));
 
@@ -36,6 +37,6 @@ myMap.set("char", "A");
 myMap.set("boolean", true);
 
 // Iterating over the entries using for...of loop
-for (let [key, value] of myMap) {
-  console.log(key + " = " + value);
-}
+// for (let [key, value] of myMap) {
+//   console.log(key + " = " + value);
+// }

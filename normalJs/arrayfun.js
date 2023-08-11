@@ -1,4 +1,10 @@
-let my_array = new Array(2, 23, 43, 45, 56, 67, 55);
+let my_array = new Array(2, 23, 43, 45, 56, 67, 55,12);
+
+let item=my_array.find((element) => {
+  return element % 2 === 0;
+})
+
+console.log(item);
 
 /*for each method
 
@@ -46,8 +52,8 @@ console.log(modified); //returned trimmed values 43,45,56
 console.log(my_array); // returned values inserted in it;
 
 console.log(my_array.splice(2, 4)); // only delete elements from starting index;
-*/
 console.log(my_array);
- my_array.splice(2, 0,"ki","ji"); // at position two add two elements
+my_array.splice(2, 0,"ki","ji"); // at position two add two elements
 console.log("my array after operation "+ my_array)
+*/
 
