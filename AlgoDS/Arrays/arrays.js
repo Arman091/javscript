@@ -1,7 +1,6 @@
 //INSERTION,DELETION
 
 //======PROBLEMS========
-// SUM OF ARRAY ELEMENTS
 
 let numbers = [1, 2, 3, 4, 5, 6];
 
@@ -54,8 +53,6 @@ function findMax_Min(numbers) {
 // PROBLEM 5:- ARRAY REVERSEL
 
 function reverseArray(numbers) {
-  // brute force approach
-
   let newnum = [];
   let i = 0;
 
