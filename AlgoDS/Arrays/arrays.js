@@ -57,8 +57,11 @@ function reverseArray(numbers) {
   let i = 0;
 
   while (i <= numbers.length - 1) {
-    element = numbers.pop();
+    element = numbers[numbers.length-1];
     newnum.push(element);
+    i++;
   }
   console.log(newnum);
 }
+
+reverseArray(numbers);
