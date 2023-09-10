@@ -10,7 +10,7 @@ const obj2 = {
     key3:'value3'
 }
 
-console.log(obj2.key1)
+console.log(obj2.key1) //not accessebile because of no link between obj1 and obj 2
 
 // we will create another object with the help of object.create
 

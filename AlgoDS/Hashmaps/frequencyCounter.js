@@ -18,7 +18,7 @@ function frequencyCount() {
 // ==== COUNTS THE WORD FREQUENCY
 
 function wordsCount(text) {
-  let wordarray = text.toLowerCase().split(/\s/); // regular expressions
+  let wordarray = text.toLowerCase().split(/\s+/); // regular expressions
   let mywordMap = new Map();
   for (let key of wordarray) {
     if (mywordMap.has(key)) {

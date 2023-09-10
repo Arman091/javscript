@@ -1,3 +1,6 @@
+// [0, 0,1, 1, 1, 1, 2, 2, 3, 3, 4]
+// Remove Duplicates from array output=[0,1,2,3,4]
+
 var removeDuplicates = function (nums) {
   /* Brute Force
       for(let i=0;i<=nums.length-1;i++){
