@@ -13,48 +13,112 @@ class LinkedList {
   }
 
   // Insert first Node or Insert at starting method;
-  insertFirst(data) {
+  insertAtStart(data) {
     const newNode = new Node(data); // Create a new node and refrence will be stored in (NewNode)
     newNode.next = this.head; // Set the new node's next to the current head
     this.head = newNode; // Update the head to be the new node
     this.size++;
   }
 
-    // insert in the End
+  // insert in the End
   insertAtEnd(data) {
     const newNode = new Node(data);
 
-    if (this.head===null) {
-      this.head = newNode; // If the list is empty, set the new node as the head
+    if (this.head === null) {
+      this.head = newNode;
     } else {
       let current = this.head;
       while (current.next) {
-        current = current.next; // Traverse the list to find the last node
+        current = current.next; 
       }
-      current.next = newNode; // Update the last node's next reference to point to the new node
+      current.next = newNode; 
     }
     this.size++;
+  }
+
+  // print linkedList
+  printData() {
+    let current = this.head;
+    while (current !== null) {
+      console.log(current.data);
+
+      current = current.next;
+    }
+  }
+
+  // insert at given index
+
+  insertAtIndex(index, data) {
+    if (index < 0 || index > this.size) {
+      console.log("Index is out of List range");
+      return;
+    } else if (index === 0) {
+      this.insertAtStart(data);
+    } else {
+      const node = new Node(data);
+      let current, previous;
+      current = this.head;
+      let count = 0;
+      while (count < index) {
+        previous = current;
+        count++;
+        current = current.next;
+      }
+      node.next = current;
+      previous.next = node;
+      this.size += 1;
+    }
+  }
+  // get Atindex
+  
+  getATindex(index) {
+    if (index < 0 || index > this.size) {
+      console.log("Index is out of List range");
+      return;
+    }
+    else {
+      let count = 0;
+      let current = this.head;
+      while (count < index) {
+        current = current.next;
+        count++;
+      }
+      console.log(current.data)
     }
     
-    // print linkedList
-
-    printData() {
-        let current = this.head;
-        while (current.next) {
-            console.log(current.data);
-            current = current.next;
-
-        }
-
-       
-    }
+  }
+  
+  removeAtindex(index) {
+     if (index < 0 || index > this.size) {
+       console.log("Index is out of List range");
+       return;
+     }
+     else if (index == 0) {
+       let current = this.head;
+       this.head = current.next;
+     }
+     else {
+       let count = 0;
+       let previous;
+       let current = this.head;
+       while (count < index) {
+         previous = current;
+         count++;
+         current = current.next;
+       }
+       previous.next = current.next;
+     }
+  }
 }
 
 let myList = new LinkedList();
-myList.insertFirst(500);
+myList.insertAtStart(500);
 myList.insertAtEnd(1000);
 myList.insertAtEnd(800);
-// myList.insertFirst(900);
-// myList.printData();
-// console.log(myList)
-myList.printData();
+myList.insertAtStart(2);
+myList.insertAtIndex(4, 100); // indexing start from 0
+// myList.printData()
+myList.removeAtindex(0);
+myList.printData()
+
+
