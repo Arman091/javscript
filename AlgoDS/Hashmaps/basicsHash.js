@@ -1,3 +1,12 @@
+/**
+ has(key): Checks if a key exists in the map.
+size: Returns the number of key-value pairs in the map.
+keys(): Returns an iterator over the keys.
+values(): Returns an iterator over the values.
+entries(): Returns an iterator over the key-value pairs.
+ */
+
+
 const myMap = new Map();
 
 myMap.set("name", "John");

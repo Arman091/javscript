@@ -8,6 +8,7 @@ function frequencyCount() {
   for (let key of myarray) {
     if (myhashMap.has(key)) {
       myhashMap.set(key, myhashMap.get(key) + 1);
+ // The get method takes the key as an argument and returns the corresponding value if the key exists in the Map,
     } else {
       myhashMap.set(key, 1);
     }

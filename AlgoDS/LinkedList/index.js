@@ -88,6 +88,7 @@ class LinkedList {
     
   }
   
+  // remove element from a given index;
   removeAtindex(index) {
      if (index < 0 || index > this.size) {
        console.log("Index is out of List range");
@@ -109,6 +110,12 @@ class LinkedList {
        previous.next = current.next;
      }
   }
+
+  // clear List;
+  clearlist() {
+    this.head = null;
+    this.size = 0;
+  }
 }
 
 let myList = new LinkedList();
@@ -117,8 +124,9 @@ myList.insertAtEnd(1000);
 myList.insertAtEnd(800);
 myList.insertAtStart(2);
 myList.insertAtIndex(4, 100); // indexing start from 0
-// myList.printData()
-myList.removeAtindex(0);
+// myList.printData();
+myList.clearlist();
+console.log(myList);
 myList.printData()
 
 
