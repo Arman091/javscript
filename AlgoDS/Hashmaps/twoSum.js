@@ -1,12 +1,16 @@
+let pairs = [];
 var twoSum = function (nums, target) {
   let numsmap = new Map();
   for (let i in nums) {
     let complement = target - nums[i];
     if (numsmap.has(complement)) {
-      return [i, numsmap.get(complement)];
+      
+      pairs.push([nums[i],complement])
+      // [i, numsmap.get(complement)];
     }
     numsmap.set(nums[i], i);
   }
+  return pairs
 };
 
 
