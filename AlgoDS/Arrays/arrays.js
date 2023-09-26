@@ -1,6 +1,9 @@
 //INSERTION,DELETION
 
-//======PROBLEMS========
+//======PROBLEMS AND CORE CONCEPTS========
+// 1.FIND GREATEST FROM ARRAY
+// 2.DIVIDE ARRAY INTO TWO PARTS
+
 
 let numbers = [1, 2, 3, 4, 5, 6];
 
