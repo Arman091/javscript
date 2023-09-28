@@ -3,4 +3,4 @@
 1.Two SUM
 2.Kid with greatest candies
 3.good pairs
-4.less Target
+4.How Many Numbers Are Smaller Than the Current Number
